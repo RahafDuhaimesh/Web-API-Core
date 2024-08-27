@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categories</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Vertical Navbar -->
+    <nav
+      class="navbar navbar-light bg-light flex-column align-items-start"
+      style="height: 100vh; width: 200px; position: fixed"
+    >
+      <div class="container-fluid flex-column">
+        <div id="navbarSupportedContent" class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../ShowCategories/ShowCategories.html"
+                >Category</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../ShowProducts/ShowProducts.html"
+                onclick="localStorage.removeItem('CategoryIDChoosen'); localStorage.removeItem('ProductIDChoosen');"
+                >Products</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <form class="form" style="margin-left: 255px;" id="form">
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input
+            type="text"
+            id="CategroyName"
+            class="form-control"
+            name="CategroyName"
+          />
+          <label class="form-label" for="form1Example1">Categroy Name</label>
+        </div>
+  
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input
+            type="file"
+            id="CategroyImage"
+            class="form-control"
+            name="CategroyImage"
+          />
+          <label class="form-label" for="form1Example2">CategroyImage</label>
+        </div>
+        <button  type="submit" onclick="EditCategory()">edit</button>
+      </form> 
+      
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="EditCategory.js"></script>
+  </body>
+</html>
