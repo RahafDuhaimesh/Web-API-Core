@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="form">
+      <!-- Email input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input
+          type="number"
+          id="CategoryId"
+          class="form-control"
+          name="CategoryId"
+        />
+        <label class="form-label" for="form1Example1">CategoryId</label>
+      </div>
+
+      <!-- Password input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input
+          type="text"
+          id="ProductName"
+          class="form-control"
+          name="ProductName"
+        />
+        <label class="form-label" for="form1Example2">Product Name</label>
+      </div>
+      <!-- Password input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="text" id="Description" name="Description" />
+        <label class="form-label" for="form1Example2">Description</label>
+      </div>
+      <!-- Password input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input
+          type="file"
+          id="ProductImage"
+          class="form-control"
+          name="ProductImage"
+        />
+        <label class="form-label" for="form1Example2">Product Image</label>
+      </div>
+      <!-- Password input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="number" id="Price" class="form-control" name="Price" />
+        <label class="form-label" for="form1Example2">Price</label>
+      </div>
+
+      <button id="formx" type="submit" onclick="editProduct()">edit</button>
+    </form>
+    <script src="editproduct.js"></script>
+  </body>
+</html>
