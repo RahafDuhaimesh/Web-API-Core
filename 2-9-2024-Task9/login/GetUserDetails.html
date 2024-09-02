@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="get"
+      name="get"
+      onchange="getData()"
+      placeholder="enter your ID"
+    />
+    <div id="container"></div>
+  </body>
+  <script>
+    async function getData() {
+      debugger;
+      let inputFiled = document.getElementById("get").value;
+      let URL = `https://localhost:7152/api/Users/Users/${inputFiled}`;
+
+      let request = await fetch(URL);
+      let result = await request.json();
+
+      var container = document.getElementById("container");
+
+      container.innerHTML = `
+        <p>id = ${result.id}</p>
+        <p>email = ${result.email}</p>
+        <p>name = ${result.userName}</p>
+
+        `;
+    }
+  </script>
+</html>
